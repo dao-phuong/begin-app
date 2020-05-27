@@ -1,0 +1,15 @@
+{
+  "name": "begin-app",
+  "version": "0.0.0",
+  "description": "SSR with Deno",
+  "scripts": {
+    "_test": "deno test test",
+    "lint": "deno fmt src && deno fmt test",
+    "build": "mkdirp dist && deno bundle src/browser.tsx > dist/browser.js",
+    "start": "npm run build && sandbox"
+  },
+  "devDependencies": {
+    "@architect/sandbox": "^1.9.6",
+    "mkdirp": "^1.0.4"
+  }
+}
